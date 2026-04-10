@@ -8,6 +8,6 @@ function graficarGato() {
   // Color del gato 
   ctx.fillStyle = 'blue';
   // Dibuja un cuadrado representando al gato
-  ctx.fillRect(200, 200, 50, 50); 
+  ctx.fillRect(175, 225, 150, 50); 
 }
 
