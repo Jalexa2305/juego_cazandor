@@ -12,7 +12,7 @@ let tiempo = 10;
 let detenerJ;
 
 //Constantes
-const ANCHO_GATO = 50;
+const ANCHO_GATO = 100;
 const ALTO_GATO = 50;
 const ANCHO_COMIDA = 30;
 const ALTO_COMIDA = 30;
