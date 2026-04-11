@@ -8,6 +8,7 @@ let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 let puntos = 0;
+let tiempo = 10;
 
 //Constantes
 const ANCHO_GATO = 50;
@@ -42,6 +43,7 @@ function iniciarJuego(){
   //Calcular posicion para que comida este en la esquina inferior derecha
   comidaX = canvas.width - ANCHO_COMIDA;
   comidaY = canvas.height - ALTO_COMIDA;
+  setInterval(restarTiempo, 1000);
   graficarGato();
   graficarComida();
 }
@@ -98,4 +100,8 @@ function detectarColision(){
     graficarGato();
     graficarComida();
   } 
+}
+function restarTiempo(){
+  tiempo = tiempo -1;
+  mostrarEnSpan("tiempo", tiempo);
 }
