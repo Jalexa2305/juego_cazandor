@@ -8,7 +8,7 @@ let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 let puntos = 0;
-let tiempo = 10;
+let tiempo = 20;
 let detenerJ;
 
 //Constantes
@@ -96,13 +96,15 @@ function detectarColision(){
     puntos = puntos + 1;
     mostrarEnSpan("puntaje", puntos);
 
-    tiempo = 10;
-      mostrarEnSpan("tiempo", tiempo);
+    clearInterval(detenerJ);
+    tiempo = 20;
+    mostrarEnSpan("tiempo", tiempo);
+    detenerJ = setInterval(restarTiempo, 1000);
 
     if( puntos === 6){
       clearInterval(detenerJ);
-      alert("¡Ganaste el juego!");
-      location.reload();
+      tiempo = 20;
+      detenerJ = setInterval(restarTiempo ,1000);
       return;
     }
     comidaX = generarAleatorio(0, canvas.width - ANCHO_COMIDA);
@@ -118,7 +120,7 @@ function restarTiempo(){
   if (tiempo === 0 ){
     clearInterval(detenerJ);
     alert("GAME OVER");
-    Location.reload();
+    location.reload();
   }
 }
 function reiniciarJuego(){
