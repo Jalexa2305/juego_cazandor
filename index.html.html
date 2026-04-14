@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cazando.css">
   <title>Cazando 🐾</title>
+  <link rel="stylesheet" href="cazando.css">
 </head>
 
 <body onload="iniciarJuego();">
-
-  <!-- Fondo decorativo -->
-  <div class="bg"></div>
 
   <div class="game-wrapper">
 
@@ -18,7 +15,7 @@
     <header class="game-header">
       <h1>🐾 Cazando 🐾</h1>
       <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="logo">
-      <p class="author">por Alexandra Ramírez</p>
+      <p class="author">Por: Alexandra Ramírez</p>
     </header>
 
     <!-- CONTENIDO -->
@@ -48,13 +45,11 @@
         </div>
 
         <div class="card controles">
-          <button onclick="moverArriba()">▲</button><br>
-          <button onclick="moverIzquierda()">◀</button>
-          <span>🐱</span>
-          <button onclick="moverDerecha()">▶</button><br>
-          <button onclick="moverAbajo()">▼</button>
+          <button class="arriba" onclick="moverArriba()">▲</button>
+          <button class="izquierda" onclick="moverIzquierda()">◀</button>
+          <button class="derecha" onclick="moverDerecha()">▶</button>
+          <button class="abajo" onclick="moverAbajo()">▼</button>
         </div>
-
         <button class="btn-restart" onclick="reiniciarJuego()">↺ Reiniciar</button>
 
       </aside>
