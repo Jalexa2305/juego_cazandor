@@ -12,7 +12,7 @@ let tiempo = 20;
 let detenerJ;
 
 //Constantes
-const ANCHO_GATO = 100;
+const ANCHO_GATO = 50;
 const ALTO_GATO = 50;
 const ANCHO_COMIDA = 30;
 const ALTO_COMIDA = 30;
@@ -26,7 +26,7 @@ function graficarGato() {
  // ctx.fillStyle = 'blue';
   // Dibuja un rectangulo centrado 
   //*ctx.fillRect(gatoX, gatoY, ANCHO_GATO, ALTO_GATO); 
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, 'blue');
+  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, 'yellow');
 }
 function graficarComida(){
   // Implementacion de la funcion 
@@ -38,8 +38,8 @@ function graficarComida(){
 }
 function iniciarJuego(){
   //calcular posicion para gato centrado 
-  gatoX = (canvas.width - ANCHO_GATO) / 2;
-  gatoY = (canvas.height - ALTO_GATO) / 2;
+  gatoX = 0 + ANCHO_GAT0;
+  gatoY = 0 + ALTO_GATO;
 
   //Calcular posicion para que comida este en la esquina inferior derecha
   comidaX = canvas.width - ANCHO_COMIDA;
